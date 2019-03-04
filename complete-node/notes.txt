@@ -1,0 +1,8 @@
+lodash - util
+yargs: args parse
+chalk: color
+nodemon: hot reload
+arrow function: di not bind "this" on same scope, but bind "this" on parent scope 
+express server
+handlebars
+hbs: integrate handlebars with express
