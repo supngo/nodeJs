@@ -6,3 +6,7 @@ arrow function: di not bind "this" on same scope, but bind "this" on parent scop
 express server
 handlebars
 hbs: integrate handlebars with express
+
+mongodb:
+docker volume create mongodbdata
+docker run -d -p 27017:27017 -v mongodbdata:/data/db mongo
