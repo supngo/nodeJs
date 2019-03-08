@@ -50,15 +50,6 @@ router.post('/users/logoutAll', auth, async (req, res) => {
     }
 })
 
-// router.get('/users', auth, async (req, res) => {
-//     try {
-//         const users = await User.find({})
-//         res.send(users)
-//     } catch (e) {
-//         res.status(500).send()
-//     }
-// })
-
 router.get('/users/me', auth, async (req, res) => {
     res.send(req.user)
 })
@@ -152,9 +143,7 @@ const upload = multer({
         cb(undefined, true)
     }
 })
-// const errorMiddleware = (req, res, next) {
-//     throw new Error('Error')
-// }
+
 router.post('/users/me/avatar', auth, upload.single('avatar'), async (req, res) => {
     const buffer = await sharp(req.file.buffer).resize({ width: 250, height: 250 }).png().toBuffer()
     req.user.avatar = buffer

@@ -10,3 +10,12 @@ hbs: integrate handlebars with express
 mongodb:
 docker volume create mongodbdata
 docker run -d -p 27017:27017 -v mongodbdata:/data/db mongo
+
+jest test:
+supertest is for testing express
+
+--watch is for hot reload, 
+--runInBand is for running tests in series
+
+toBe use === operator to compare if 2 objects are same objects
+toEqual use algorithm to compare object with other object
